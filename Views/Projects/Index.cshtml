@@ -1,0 +1,13 @@
+@model IEnumerable<LabProjectTracker.Models.Project>
+
+<h2>Projects</h2>
+<a href="/Projects/Create">Add New Project</a>
+<ul>
+@foreach (var p in Model)
+{
+    <li>
+        <a href="/Projects/Details/@p.Id">@p.Name</a> - @p.Tasks.Count() tasks
+    </li>
+}
+</ul>
+
