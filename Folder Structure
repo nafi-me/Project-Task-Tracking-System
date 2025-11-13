@@ -1,0 +1,19 @@
+LabProjectTracker/
+│
+├── Controllers/
+│   ├── ProjectsController.cs
+│   └── TasksController.cs
+│
+├── Models/
+│   ├── Project.cs
+│   └── TaskItem.cs
+│
+├── Data/
+│   └── AppDbContext.cs
+│
+├── Views/
+│   ├── Projects/
+│   └── Tasks/
+│
+├── appsettings.json
+└── Program.cs
