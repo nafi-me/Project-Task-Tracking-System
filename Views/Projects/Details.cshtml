@@ -1,0 +1,22 @@
+@model LabProjectTracker.Models.Project
+
+<h2>@Model.Name</h2>
+<p>@Model.Description</p>
+
+<h3>Tasks</h3>
+<ul>
+@foreach (var t in Model.Tasks)
+{
+    <li>
+        @t.Title - @t.Status
+        @if (t.Status != "Done")
+        {
+            <form method="post" action="/Tasks/Complete/@t.Id">
+                <button type="submit">Mark Done</button>
+            </form>
+        }
+    </li>
+}
+</ul>
+
+<a href="/Tasks/Create?projectId=@Model.Id">Add Task</a>
